@@ -28,7 +28,7 @@ class KeyVaultClientConfiguration(Configuration):
     ):
         super(KeyVaultClientConfiguration, self).__init__(**kwargs)
 
-        kwargs.setdefault('sdk_moniker', 'azure-keyvault/{}'.format(VERSION))
+        kwargs.setdefault('sdk_moniker', f'azure-keyvault/{VERSION}')
         self._configure(**kwargs)
 
     def _configure(

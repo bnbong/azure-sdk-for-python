@@ -61,7 +61,7 @@ class KeyVaultClient(KeyVaultClientOperationsMixin, MultiApiClientMixin, _SDKCli
         if api_version == '7.2' or api_version == '7.3' or api_version == '7.4':
             base_url = '{vaultBaseUrl}'
         else:
-            raise ValueError("API version {} is not available".format(api_version))
+            raise ValueError(f"API version {api_version} is not available")
         self._config = KeyVaultClientConfiguration(**kwargs)
         self._client = PipelineClient(base_url=base_url, config=self._config, **kwargs)
         super(KeyVaultClient, self).__init__(
@@ -90,7 +90,7 @@ class KeyVaultClient(KeyVaultClientOperationsMixin, MultiApiClientMixin, _SDKCli
         elif api_version == '7.4':
             from .v7_4 import models
             return models
-        raise ValueError("API version {} is not available".format(api_version))
+        raise ValueError(f"API version {api_version} is not available")
 
     @property
     def role_assignments(self):
@@ -108,7 +108,7 @@ class KeyVaultClient(KeyVaultClientOperationsMixin, MultiApiClientMixin, _SDKCli
         elif api_version == '7.4':
             from .v7_4.operations import RoleAssignmentsOperations as OperationClass
         else:
-            raise ValueError("API version {} does not have operation group 'role_assignments'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation group 'role_assignments'")
         self._config.api_version = api_version
         return OperationClass(self._client, self._config, Serializer(self._models_dict(api_version)), Deserializer(self._models_dict(api_version)))
 
@@ -128,7 +128,7 @@ class KeyVaultClient(KeyVaultClientOperationsMixin, MultiApiClientMixin, _SDKCli
         elif api_version == '7.4':
             from .v7_4.operations import RoleDefinitionsOperations as OperationClass
         else:
-            raise ValueError("API version {} does not have operation group 'role_definitions'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation group 'role_definitions'")
         self._config.api_version = api_version
         return OperationClass(self._client, self._config, Serializer(self._models_dict(api_version)), Deserializer(self._models_dict(api_version)))
 

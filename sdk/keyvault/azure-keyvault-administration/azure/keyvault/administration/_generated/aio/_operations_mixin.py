@@ -57,7 +57,7 @@ class KeyVaultClientOperationsMixin(object):
         elif api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'begin_full_backup'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'begin_full_backup'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -106,7 +106,7 @@ class KeyVaultClientOperationsMixin(object):
         elif api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'begin_full_restore_operation'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'begin_full_restore_operation'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -160,7 +160,7 @@ class KeyVaultClientOperationsMixin(object):
         elif api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'begin_selective_key_restore_operation'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'begin_selective_key_restore_operation'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -195,7 +195,7 @@ class KeyVaultClientOperationsMixin(object):
         elif api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'full_backup_status'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'full_backup_status'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -229,7 +229,7 @@ class KeyVaultClientOperationsMixin(object):
         if api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'get_setting'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'get_setting'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -259,7 +259,7 @@ class KeyVaultClientOperationsMixin(object):
         if api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'get_settings'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'get_settings'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -294,7 +294,7 @@ class KeyVaultClientOperationsMixin(object):
         elif api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'restore_status'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'restore_status'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
@@ -336,7 +336,7 @@ class KeyVaultClientOperationsMixin(object):
         if api_version == '7.4':
             from ..v7_4.aio.operations import KeyVaultClientOperationsMixin as OperationClass
         else:
-            raise ValueError("API version {} does not have operation 'update_setting'".format(api_version))
+            raise ValueError(f"API version {api_version} does not have operation 'update_setting'")
         mixin_instance = OperationClass()
         mixin_instance._client = self._client
         mixin_instance._config = self._config
